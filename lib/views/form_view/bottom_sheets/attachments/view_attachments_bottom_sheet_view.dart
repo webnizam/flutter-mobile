@@ -17,7 +17,7 @@ import 'package:frappe_app/views/form_view/bottom_sheets/attachments/view_attach
 
 import 'package:frappe_app/widgets/frappe_bottom_sheet.dart';
 import 'package:frappe_app/widgets/frappe_button.dart';
-import 'package:open_file/open_file.dart';
+import 'package:open_file_plus/open_file_plus.dart';
 
 import 'add_attachments_bottom_sheet_view.dart';
 

@@ -307,7 +307,7 @@ initDb() async {
 
 initLocalNotifications() async {
   const AndroidInitializationSettings initializationSettingsAndroid =
-      AndroidInitializationSettings('app_icon');
+      AndroidInitializationSettings('@mipmap/ic_launcher');
 
   final IOSInitializationSettings initializationSettingsIOS =
       IOSInitializationSettings();

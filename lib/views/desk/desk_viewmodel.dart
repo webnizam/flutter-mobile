@@ -9,8 +9,7 @@ import 'package:frappe_app/utils/loading_indicator.dart';
 import 'package:frappe_app/views/form_view/form_view.dart';
 import 'package:frappe_app/views/list_view/list_view.dart';
 import 'package:injectable/injectable.dart';
-import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
-
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import '../../app/locator.dart';
 import '../../services/api/api.dart';
 import '../../views/base_viewmodel.dart';
@@ -179,7 +178,7 @@ class DeskViewModel extends BaseViewModel {
       LoadingIndicator.stopLoading();
 
       if (meta.docs[0].issingle == 1) {
-        pushNewScreen(
+        PersistentNavBarNavigator.pushNewScreen(
           context,
           screen: FormView(
             meta: meta.docs[0],
@@ -188,7 +187,7 @@ class DeskViewModel extends BaseViewModel {
           withNavBar: true,
         );
       } else {
-        pushNewScreen(
+        PersistentNavBarNavigator.pushNewScreen(
           context,
           screen: CustomListView(
             meta: meta,

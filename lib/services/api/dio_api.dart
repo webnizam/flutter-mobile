@@ -54,7 +54,7 @@ class DioApi implements Api {
       if (error is SocketException) {
         throw ErrorResponse(
           statusCode: HttpStatus.serviceUnavailable,
-          statusMessage: error.message,
+          statusMessage: error.toString(),
         );
       }
 
@@ -66,7 +66,7 @@ class DioApi implements Api {
         );
       }
 
-      throw ErrorResponse(statusMessage: error.message);
+      throw ErrorResponse(statusMessage: error.toString());
     }
   }
 
@@ -123,10 +123,10 @@ class DioApi implements Api {
         if (error is SocketException) {
           throw ErrorResponse(
             statusCode: HttpStatus.serviceUnavailable,
-            statusMessage: error.message,
+            statusMessage: error.toString(),
           );
         } else {
-          throw ErrorResponse(statusMessage: error.message);
+          throw ErrorResponse(statusMessage: error.toString());
         }
       } else {
         throw e;
@@ -168,10 +168,10 @@ class DioApi implements Api {
         if (error is SocketException) {
           throw ErrorResponse(
             statusCode: HttpStatus.serviceUnavailable,
-            statusMessage: error.message,
+            statusMessage: error.toString(),
           );
         } else {
-          throw ErrorResponse(statusMessage: error.message);
+          throw ErrorResponse(statusMessage: error.toString());
         }
       } else {
         throw e;
@@ -223,10 +223,10 @@ class DioApi implements Api {
         if (error is SocketException) {
           throw ErrorResponse(
             statusCode: HttpStatus.serviceUnavailable,
-            statusMessage: error.message,
+            statusMessage: error.toString(),
           );
         } else {
-          throw ErrorResponse(statusMessage: error.message);
+          throw ErrorResponse(statusMessage: error.toString());
         }
       } else {
         throw ErrorResponse();
@@ -319,10 +319,10 @@ class DioApi implements Api {
         if (error is SocketException) {
           throw ErrorResponse(
             statusCode: HttpStatus.serviceUnavailable,
-            statusMessage: error.message,
+            statusMessage: error.toString(),
           );
         } else {
-          throw ErrorResponse(statusMessage: error.message);
+          throw ErrorResponse(statusMessage: error.toString());
         }
       } else {
         throw ErrorResponse();
@@ -366,10 +366,10 @@ class DioApi implements Api {
         if (error is SocketException) {
           throw ErrorResponse(
             statusCode: HttpStatus.serviceUnavailable,
-            statusMessage: error.message,
+            statusMessage: error.toString(),
           );
         } else {
-          throw ErrorResponse(statusMessage: error.message);
+          throw ErrorResponse(statusMessage: error.toString());
         }
       } else {
         throw e;
@@ -475,7 +475,7 @@ class DioApi implements Api {
         if (error is SocketException) {
           throw ErrorResponse(
             statusCode: HttpStatus.serviceUnavailable,
-            statusMessage: error.message,
+            statusMessage: error.toString(),
           );
         } else {
           throw ErrorResponse(
@@ -646,12 +646,12 @@ class DioApi implements Api {
           if (e.error is SocketException) {
             throw ErrorResponse(
               statusCode: HttpStatus.serviceUnavailable,
-              statusMessage: e.error.message,
+              statusMessage: e.error.toString(),
             );
           } else {
             throw ErrorResponse(
-              statusCode: e.error.statusCode,
-              statusMessage: e.error.statusMessage,
+              statusCode: e.response.statusCode,
+              statusMessage: e.message,
             );
           }
         }
@@ -712,10 +712,10 @@ class DioApi implements Api {
         if (error is SocketException) {
           throw ErrorResponse(
             statusCode: HttpStatus.serviceUnavailable,
-            statusMessage: error.message,
+            statusMessage: error.toString(),
           );
         } else {
-          throw ErrorResponse(statusMessage: error.message);
+          throw ErrorResponse(statusMessage: error.toString());
         }
       } else {
         throw e;
@@ -856,10 +856,10 @@ class DioApi implements Api {
         if (error is SocketException) {
           throw ErrorResponse(
             statusCode: HttpStatus.serviceUnavailable,
-            statusMessage: error.message,
+            statusMessage: error.toString(),
           );
         } else {
-          throw ErrorResponse(statusMessage: error.message);
+          throw ErrorResponse(statusMessage: error.toString());
         }
       } else {
         throw ErrorResponse();
@@ -992,10 +992,10 @@ class DioApi implements Api {
         if (error is SocketException) {
           throw ErrorResponse(
             statusCode: HttpStatus.serviceUnavailable,
-            statusMessage: error.message,
+            statusMessage: error.toString(),
           );
         } else {
-          throw ErrorResponse(statusMessage: error.message);
+          throw ErrorResponse(statusMessage: error.toString());
         }
       } else {
         throw ErrorResponse();
@@ -1040,10 +1040,10 @@ class DioApi implements Api {
         if (error is SocketException) {
           throw ErrorResponse(
             statusCode: HttpStatus.serviceUnavailable,
-            statusMessage: error.message,
+            statusMessage: error.toString(),
           );
         } else {
-          throw ErrorResponse(statusMessage: error.message);
+          throw ErrorResponse(statusMessage: error.toString());
         }
       } else {
         throw ErrorResponse();
@@ -1076,10 +1076,10 @@ class DioApi implements Api {
         if (error is SocketException) {
           throw ErrorResponse(
             statusCode: HttpStatus.serviceUnavailable,
-            statusMessage: error.message,
+            statusMessage: error.toString(),
           );
         } else {
-          throw ErrorResponse(statusMessage: error.message);
+          throw ErrorResponse(statusMessage: error.toString());
         }
       } else {
         throw ErrorResponse();
@@ -1112,10 +1112,10 @@ class DioApi implements Api {
         if (error is SocketException) {
           throw ErrorResponse(
             statusCode: HttpStatus.serviceUnavailable,
-            statusMessage: error.message,
+            statusMessage: error.toString(),
           );
         } else {
-          throw ErrorResponse(statusMessage: error.message);
+          throw ErrorResponse(statusMessage: error.toString());
         }
       } else {
         throw ErrorResponse();
@@ -1159,10 +1159,10 @@ class DioApi implements Api {
         if (error is SocketException) {
           throw ErrorResponse(
             statusCode: HttpStatus.serviceUnavailable,
-            statusMessage: error.message,
+            statusMessage: error.toString(),
           );
         } else {
-          throw ErrorResponse(statusMessage: error.message);
+          throw ErrorResponse(statusMessage: error.toString());
         }
       } else {
         throw ErrorResponse();
